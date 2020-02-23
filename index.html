@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Create Modern CVs</title>
+	<link rel="stylesheet" type="text/css" href="dist/style.css">
+	<script src="dist/app.js" defer></script>
+</head>
+<body id="target1">
+		
+		<section class="app" id="app">
+			<div class="overlay-block" id="blockOverlay" v-if='needsWaiting'></div>
+		<v-nav></v-nav>
+		<div class="header">
+			<div class="control" id="menu_ball">
+				<span id="toggle_button" class="toggle-menu-visibility" title="toggle navbar visibility">
+					<span id="tl" class="tl"></span>
+					<span id="md" class="md"></span>
+					<span id="tr" class="tr"></span>
+				</span>
+			</div>
+			<div class="title-bar">
+				<h1 class="app-name">CV Creator</h1>
+			</div>
+			<div class="sm-round bg-white" @click="toggleNotification">
+				<span class="t-green"><strong>𝒾</strong></span>
+			</div>
+			<div :class="toggleNotificationClass" class="t-center header-notification">
+				<span>
+					<span>Income: </span>
+					<span class="t-green">${{cashFlow.totalCredit}}</span class="t-green">
+				</span> &ndash;
+				<span>
+					<span>Spent: </span>
+					<span class="t-red">${{cashFlow.totalDebit}}</span class="t-red">
+				</span>
+				<p>=</p>
+				<p :class="{'t-green':mySavings>0, 't-red':mySavings<0}">
+					<span><i>Saved: </i></span>
+					<span><strong>${{mySavings}}</strong></span>
+				</p>
+			</div>
+		</div>
+		
+		<div id="page" class="container-fluid page">
+			<transition name="fade">
+				<div class="body">
+					<router-view></router-view>
+				</div>
+			</transition>
+		</div>
+		<div class="footer-control">
+			<span class="x1 bg-white">
+				<router-link to="/">Home</router-link>
+			</span>
+			<span class="x1 bg-white">
+				<router-link to="/my-cvs">CVs</router-link>
+			</span>
+			<span class="x1 bg-white">
+				<router-link to="/budgets">Jobs</router-link>
+			</span>
+		</div>
+		
+	</section>
+</body>
