@@ -51,6 +51,6 @@
         <variable name="ADMOB_APP_ID" value="ca-app-pub-4080611919888715~1109479418" />
     </plugin> -->
     
-    <plugin name="cordova-plugin-inappbrowser" source="npm" />
+    <!-- <plugin name="cordova-plugin-inappbrowser" source="npm" /> -->
     <icon src="fin_manager.png" />
 </widget>
