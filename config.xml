@@ -50,7 +50,7 @@
         <variable name="PLAY_SERVICES_VERSION" value="16.0.0" />
         <variable name="ADMOB_APP_ID" value="ca-app-pub-4080611919888715~1109479418" />
     </plugin>
-    <gap:plugin name="de.appplant.cordova.plugin.printer" />
+    <plugin name="cordova-pdf-generator" source="npm" />
     
     <!-- <plugin name="cordova-plugin-inappbrowser" source="npm" /> -->
     <icon src="fin_manager.png" />
