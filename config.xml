@@ -45,11 +45,12 @@
     </platform>
     <preference name="SplashScreenDelay" value="3000" />
 
-    <!-- <preference name="android-build-tool" value="gradle" /> 
+    <!-- <preference name="android-build-tool" value="gradle" />  -->
     <plugin name="cordova-plugin-admobpro" source="npm">
         <variable name="PLAY_SERVICES_VERSION" value="16.0.0" />
         <variable name="ADMOB_APP_ID" value="ca-app-pub-4080611919888715~1109479418" />
-    </plugin> -->
+    </plugin>
+    <gap:plugin name="de.appplant.cordova.plugin.printer" />
     
     <!-- <plugin name="cordova-plugin-inappbrowser" source="npm" /> -->
     <icon src="fin_manager.png" />
